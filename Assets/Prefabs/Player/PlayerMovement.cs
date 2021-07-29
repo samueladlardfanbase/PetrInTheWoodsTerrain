@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float StaminaReplenishingSpeed = 1;
     //Normal variables
     float moveSpeed;
-    float crouchHeight = 2;
+    float crouchHeight = 1.5f;
     float staminaamount = 0.25f;
     float t = 0;
     float t1 = 0;
@@ -114,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = Speed;
             
         }
-        crouchHeight = Mathf.Lerp(0.5f, -0.25f, t);
+        crouchHeight = Mathf.Lerp(0.5f, -0.5f, t);
         camerapos.localPosition = new Vector3(camerapos.localPosition.x, crouchHeight, camerapos.localPosition.z);
         
     }

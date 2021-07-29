@@ -60,7 +60,7 @@ public class Petrnavigation : MonoBehaviour
 
     void Hunting()
     {
-        petrAgent.speed = 50;
+        petrAgent.speed = 100;
         
         targetDestination = playerFollowPostion.position;
     }
@@ -71,7 +71,7 @@ public class Petrnavigation : MonoBehaviour
         petrstate = 2;
         targetDestination = player.position;
         playerCamera.LookAt(new Vector3(transform.position.x, playerCamera.position.y, transform.position.z));
-        jumpScareSound.Play();
+        //jumpScareSound.Play();
     }
     void Currentsate()
     {
@@ -81,11 +81,11 @@ public class Petrnavigation : MonoBehaviour
         {
             petrstate = 1;
         }
-        else if(Vector3.Distance(player.position, transform.position) <= 20 && playerMovement.issprinting == false)
+        else if(Vector3.Distance(player.position, transform.position) <=  30 && playerMovement.issprinting == false)
         {
             petrstate = 1;
         }
-        else if (Vector3.Distance(player.position, transform.position) <= 30 && playerMovement.issprinting == true)
+        else if (Vector3.Distance(player.position, transform.position) <= 40 && playerMovement.issprinting == true)
         {
             petrstate = 1;
         }
