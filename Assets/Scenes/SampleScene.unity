@@ -214,8 +214,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -184.91125, y: -200}
-  m_SizeDelta: {x: -283.5167, y: 0}
+  m_AnchoredPosition: {x: -184.91125, y: -142.49997}
+  m_SizeDelta: {x: -283.5167, y: 114.99994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8336561
 MonoBehaviour:
@@ -3145,7 +3145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &908981628
 Transform:
   m_ObjectHideFlags: 0
@@ -5771,7 +5771,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844029026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.78, y: 110.79, z: 401.16}
+  m_LocalPosition: {x: 133.07, y: 34.36, z: 422.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 530334052149319310}
@@ -6563,8 +6563,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 200, y: -200}
-  m_SizeDelta: {x: -100, y: 0}
+  m_AnchoredPosition: {x: 200, y: -142.49997}
+  m_SizeDelta: {x: -100, y: 114.99994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2042120504
 MonoBehaviour:
@@ -7818,7 +7818,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7332125923732379556}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7890,7 +7890,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2404526264964036759}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7992,7 +7992,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8500307809223327410}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -8087,7 +8087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &4860946002986356169
 GameObject:
   m_ObjectHideFlags: 0
@@ -8512,7 +8512,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2039c6218c5bc9c42922e507521b8bd3, type: 3}
   m_Controller: {fileID: 9100000, guid: c90abd72c29e5d045aaeef64505d8594, type: 2}
-  m_CullingMode: 2
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -8535,6 +8535,7 @@ MonoBehaviour:
   Torchbit1: {fileID: 7332125923732379556}
   Torchbit2: {fileID: 2404526264964036759}
   Torchbit3: {fileID: 8500307809223327410}
+  torchlight: {fileID: 908981627}
   anim: {fileID: 0}
 --- !u!4 &6670084445495868568
 Transform:
