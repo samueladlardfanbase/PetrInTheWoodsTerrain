@@ -10,7 +10,7 @@ public class Torchscript : MonoBehaviour
     public GameObject torchlight;
     public Animator anim;
     
-    bool equiped = false;
+    public bool equiped = false;
     bool torchon = false;
     private void Start()
     {
@@ -20,24 +20,6 @@ public class Torchscript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("1") && equiped == false)
-        {
-            Torchbit1.GetComponent<MeshRenderer>().enabled = true;
-            Torchbit2.GetComponent<MeshRenderer>().enabled = true;
-            Torchbit3.GetComponent<MeshRenderer>().enabled = true;
-            
-            equiped = true;
-        }
-        else if(Input.GetKeyDown("1") && equiped == true)
-        {
-            equiped = false;
-            Torchbit1.GetComponent<MeshRenderer>().enabled = false;
-            Torchbit2.GetComponent<MeshRenderer>().enabled = false;
-            Torchbit3.GetComponent<MeshRenderer>().enabled = false;
-            torchlight.SetActive(false);
-            torchon = false;
-        }
-
         if (equiped == true && Input.GetMouseButtonDown(0) && torchon == false)
         {
 
@@ -54,6 +36,24 @@ public class Torchscript : MonoBehaviour
         }
     }
 
+    public void Equip()
+    {
+        Torchbit1.GetComponent<MeshRenderer>().enabled = true;
+        Torchbit2.GetComponent<MeshRenderer>().enabled = true;
+        Torchbit3.GetComponent<MeshRenderer>().enabled = true;
+
+        equiped = true;
+    }
+
+    public void UnEquip()
+    {
+        equiped = false;
+        Torchbit1.GetComponent<MeshRenderer>().enabled = false;
+        Torchbit2.GetComponent<MeshRenderer>().enabled = false;
+        Torchbit3.GetComponent<MeshRenderer>().enabled = false;
+        torchlight.SetActive(false);
+        torchon = false;
+    }
     
     
 

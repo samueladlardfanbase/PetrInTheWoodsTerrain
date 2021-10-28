@@ -19,6 +19,7 @@ public class Petrnavigation : MonoBehaviour
     float searchposx;
     float searchposz;
 
+    public GameObject timer;
 
     float nextSound;
     public float SoundDelay = 5;
@@ -67,11 +68,12 @@ public class Petrnavigation : MonoBehaviour
 
     void JumpScare()
     {
+        
         petrAgent.speed = 30;
         petrstate = 2;
         targetDestination = player.position;
         playerCamera.LookAt(new Vector3(transform.position.x, playerCamera.position.y, transform.position.z));
-        //jumpScareSound.Play();
+        timer.GetComponent<Timer>().alive = false;
     }
     void Currentsate()
     {

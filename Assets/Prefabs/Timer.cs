@@ -5,8 +5,13 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Text timerText;
+    public bool alive = true;
     void Update()
     {
-        timerText.text = "TIME SURVIVED: " + Mathf.RoundToInt(Time.time); 
+        if (alive)
+        {
+            timerText.text = "TIME SURVIVED: " + Mathf.RoundToInt(Time.time);
+        }
+        
     }
 }
