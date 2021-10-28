@@ -14,19 +14,17 @@ public class Radio : MonoBehaviour
         Vector3 difference = petr.transform.position - player.position;
         float radAngle = 0;
         Vector3 direction = difference;
-        if (direction.x > 0)
-        {
-            radAngle = Mathf.Atan2(direction.x, direction.z);
-        }
-        else
-        {
-            radAngle = Mathf.Atan2(-direction.x, direction.z);
-        }
+       
+        
+        radAngle = Mathf.Atan2(direction.x, direction.z);
+        
+        
         
         float degAngle = radAngle * Mathf.Rad2Deg;
         float angle = Mathf.RoundToInt(degAngle - player.rotation.eulerAngles.y);
         print(angle);
-        if (angle > 45 || angle > -45)
+        
+        if ((angle < -315 || angle > -45 && angle < 0) || angle < 45 && angle > 0 || angle == 0)
         {
             alarmLight.SetActive(true);
         }
