@@ -13,7 +13,6 @@ public class ItemScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1) && torch.GetComponent<Torchscript>().equiped == false)
         {
             torch.GetComponent<Torchscript>().Equip();
-            
         }
         else if(Input.GetKeyDown(KeyCode.Alpha1))
         {
