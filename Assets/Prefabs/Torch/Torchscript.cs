@@ -9,7 +9,8 @@ public class Torchscript : MonoBehaviour
     public GameObject Torchbit3;
     public GameObject torchlight;
     public Animator anim;
-    
+    public ParticleSystem lightParticle;
+
     public bool equiped = false;
     bool torchon = false;
     private void Start()
@@ -20,6 +21,7 @@ public class Torchscript : MonoBehaviour
 
     void Update()
     {
+        
         if (equiped == true && Input.GetMouseButtonDown(0) && torchon == false)
         {
 
@@ -34,6 +36,20 @@ public class Torchscript : MonoBehaviour
             torchlight.SetActive(false);
             torchon = false;
         }
+
+
+        if (torchon == true)
+        {
+            lightParticle.gameObject.SetActive(true);
+            lightParticle.Play();
+
+            lightParticle.transform.position = torchlight.transform.position;
+            lightParticle.transform.rotation = torchlight.transform.rotation;
+        }
+        else
+        {
+            lightParticle.gameObject.SetActive(false);
+        }
     }
 
     public void Equip()
@@ -41,7 +57,7 @@ public class Torchscript : MonoBehaviour
         Torchbit1.GetComponent<MeshRenderer>().enabled = true;
         Torchbit2.GetComponent<MeshRenderer>().enabled = true;
         Torchbit3.GetComponent<MeshRenderer>().enabled = true;
-
+        
         equiped = true;
     }
 
