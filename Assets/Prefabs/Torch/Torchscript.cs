@@ -10,9 +10,11 @@ public class Torchscript : MonoBehaviour
     public GameObject torchlight;
     public Animator anim;
     public ParticleSystem lightParticle;
-
+    public GameObject petr;
+    public float lerpSpeed = 1;
     public bool equiped = false;
     bool torchon = false;
+    float t = 0;
     private void Start()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -40,17 +42,14 @@ public class Torchscript : MonoBehaviour
 
         if (torchon == true)
         {
-            lightParticle.gameObject.SetActive(true);
-            lightParticle.Play();
-
-            lightParticle.transform.position = torchlight.transform.position;
-            lightParticle.transform.rotation = torchlight.transform.rotation;
+            petr.GetComponent<Petrnavigation>().sound(85, transform.position);
+            
         }
-        else
-        {
-            lightParticle.gameObject.SetActive(false);
-        }
+        
+        
     }
+
+
 
     public void Equip()
     {
