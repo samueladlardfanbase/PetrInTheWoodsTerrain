@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Petrnavigation : MonoBehaviour
 {
+    //petrs mesh
+    public GameObject petrmesh;
     //The player
     public Transform player;
     //The player's camera
@@ -31,6 +33,8 @@ public class Petrnavigation : MonoBehaviour
     //0 = search for player
     //1 = Hunt the player
     //2 = Kill the player
+
+    
     private void Awake()
     {
         playerMovement = player.gameObject.GetComponent<PlayerMovement>();
@@ -62,13 +66,14 @@ public class Petrnavigation : MonoBehaviour
     void Hunting()
     {
         petrAgent.speed = 100;
-        
+        petrmesh.SetActive(false);
+        jumpScareSound.Play();
         targetDestination = playerFollowPostion.position;
     }
 
     void JumpScare()
     {
-        
+        petrmesh.SetActive(true);
         petrAgent.speed = 30;
         petrstate = 2;
         targetDestination = player.position;

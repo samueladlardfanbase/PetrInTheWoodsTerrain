@@ -11,10 +11,10 @@ public class Torchscript : MonoBehaviour
     public Animator anim;
     public ParticleSystem lightParticle;
     public GameObject petr;
-    public float lerpSpeed = 1;
+    
     public bool equiped = false;
     bool torchon = false;
-    float t = 0;
+    
     private void Start()
     {
         anim = gameObject.GetComponent<Animator>();
