@@ -11,7 +11,8 @@ public class Torchscript : MonoBehaviour
     public Animator anim;
     public ParticleSystem lightParticle;
     public GameObject petr;
-    
+    public AudioSource click;
+
     public bool equiped = false;
     bool torchon = false;
     
@@ -30,6 +31,7 @@ public class Torchscript : MonoBehaviour
             anim.Play("Cylinder_001|Cylinder_001Action");
             torchlight.SetActive(true);
             torchon = true;
+            click.Play();
         }
         else if(equiped == true && Input.GetMouseButtonDown(0) && torchon == true)
         {
@@ -37,6 +39,7 @@ public class Torchscript : MonoBehaviour
             anim.Play("Cylinder_001|Cylinder_001Action");
             torchlight.SetActive(false);
             torchon = false;
+            click.Play();
         }
 
 

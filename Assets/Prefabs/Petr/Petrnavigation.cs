@@ -14,7 +14,8 @@ public class Petrnavigation : MonoBehaviour
     public Transform playerFollowPostion;
     //the navmesh agent of petr
     public NavMeshAgent petrAgent;
-    
+    //a light so the player will see petr's face when he kills
+    public GameObject faceLight;
     public AudioSource jumpScareSound; 
     //the maximum range petr will search around sounds
     public float searchRange = 100;
@@ -73,6 +74,7 @@ public class Petrnavigation : MonoBehaviour
 
     void JumpScare()
     {
+        faceLight.SetActive(true);
         petrmesh.SetActive(true);
         petrAgent.speed = 30;
         petrstate = 2;

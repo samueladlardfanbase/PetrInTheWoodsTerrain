@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -23,8 +24,11 @@ public class PlayerMovement : MonoBehaviour
     float t1 = 0;
     public bool issprinting = false;
     public bool iscrouching = false;
-
+    bool isMoving = false;
     Petrnavigation petrnavigation;
+
+    public AudioSource walk;
+
     private void Start()
     {
         //sets the defalt speed value
@@ -47,7 +51,14 @@ public class PlayerMovement : MonoBehaviour
             Controller.Move(MoveZ);
             Controller.Move(MoveX);
 
-
+            if (X > 0 || Z > 0)
+            {
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
 
             // calls the fucntions to sprint crouch and manage health
             Sprint();
@@ -60,6 +71,19 @@ public class PlayerMovement : MonoBehaviour
         
     }
     
+    //IEnumerator Walk()
+    //{
+    //    while (true)
+    //    {
+    //        if (isMoving)
+    //        {
+
+    //        }
+
+    //        yield return new WaitForSeconds(1);
+    //    }
+    //}
+
     void Sprint()
     {
         
